@@ -7,6 +7,7 @@ export const Pixelate = ({ handleSubmit, handleClick }) => {
     <div>
       <span>
         <form onSubmit={handleSubmit}>
+          Pixelate
           <div>
             <label htmlFor="pixelX">
               <small>X</small>

@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 const run = require("../../script/hydra");
 
-export const Hydra = ({ osc, pix }) => {
+export const Hydra = ({ img, vor, osc, pix }) => {
   useEffect(() => {
-    run(osc, pix);
+    run(img, vor, osc, pix);
   });
   return <></>;
 };
