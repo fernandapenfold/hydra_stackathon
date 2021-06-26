@@ -5,13 +5,10 @@ import InitImage from "./InitImage";
 import Voronoi from "./Voronoi";
 import Oscillate from "./Oscillate";
 import Pixelate from "./Pixelate";
+import Repeat from "./Repeat";
 
 export const Home = ({ synth }) => {
-  const { image, voronoi, oscillate, pixelate } = synth;
-  // const [osc, setOsc] = useState([60.0, 0.1, 0.0]);
-  // const [pix, setPix] = useState([1, 1]);
-  // const [funcs, setFuncs] = useState([]);
-
+  const { image, voronoi, oscillate, pixelate, repeat } = synth;
 
   return (
     <div>
@@ -19,7 +16,8 @@ export const Home = ({ synth }) => {
       <Voronoi />
       <Oscillate />
       <Pixelate />
-      <Hydra img={image} vor={voronoi} osc={oscillate} pix={pixelate} />
+      <Repeat />
+      <Hydra img={image} vor={voronoi} osc={oscillate} pix={pixelate} rep={repeat} />
     </div>
   );
 };

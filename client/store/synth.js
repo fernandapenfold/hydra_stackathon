@@ -18,11 +18,17 @@ export const handlePixelate = (payload) => ({
   payload,
 });
 
+export const handleRepeat = (payload) => ({
+    type: "repeat",
+    payload
+});
+
 const initialState = {
   image: [],
   voronoi: [],
   oscillate: [2, 0.5, 3],
   pixelate: [],
+  repeat: [],
 };
 
 export default function (state = initialState, action) {
@@ -35,6 +41,8 @@ export default function (state = initialState, action) {
       return { ...state, image: [], voronoi: [], oscillate: action.payload };
     case "pixelate":
       return { ...state, pixelate: action.payload };
+    case "repeat":
+        return { ...state, repeat: action.payload };
     default:
       return state;
   }
