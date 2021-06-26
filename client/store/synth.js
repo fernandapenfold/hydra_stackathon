@@ -9,8 +9,8 @@ export const handlePixelate = (payload) => ({
 });
 
 const initialState = {
-  oscillate: [60.0, 0.5, 15.0],
-  pixelate: [2, 20],
+  oscillate: [0.5, 3, 2],
+  pixelate: [2, 1],
 };
 
 export default function (state = initialState, action) {

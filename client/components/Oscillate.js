@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { handleOscillate } from '../store/synth';
 
-export const Oscillate = ({ handleSubmit }) => {
+export const Oscillate = ({ handleSubmit, handleClick }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -28,6 +28,7 @@ export const Oscillate = ({ handleSubmit }) => {
           <input type="submit" value="Submit" />
         </div>
       </form>
+      <button onClick={() => handleClick()}>OFF</button>
     </div>
   );
 };
@@ -39,6 +40,9 @@ const mapDispatch = dispatch => ({
     const sync = parseFloat(e.target.sync.value);
     const offset = parseFloat(e.target.offset.value);
     dispatch(handleOscillate([frequency, sync, offset]));
+  },
+  handleClick: () => {
+    dispatch(handleOscillate([1, 1, 1]));
   }
 });
 
